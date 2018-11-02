@@ -163,7 +163,7 @@ class BN128 {
         const Q2 = this.G2.affine(this._g2MulByQ(Q1));
         assert(this.F2.equals(Q2[2], this.F2.one));
 
-        if (this.loopCountNef)
+        if (this.loopCountNeg)
         {
             R.Y = this.F2.neg(R.Y);
         }
@@ -213,7 +213,7 @@ class BN128 {
 
         }
 
-        if (this.loopCountNef)
+        if (this.loopCountNeg)
         {
             f = this.F12.inverse(f);
         }
